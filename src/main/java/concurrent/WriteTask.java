@@ -27,8 +27,7 @@ public class WriteTask implements Runnable {
                 double oldY = func.getY(i);
                 func.setY(i, value);
                 log.trace("Поток {}: точка [{}] x = {}, y изменено с {} на {}", Thread.currentThread().getName(), i, x, oldY, value);
-
-                System.out.printf("Writing for index %d complete\n", i);
+                log.info("Запись для индекса {} завершена", i);
             }
         }
         log.info("Поток {} закончил выполнение WriteTask", Thread.currentThread().getName());
