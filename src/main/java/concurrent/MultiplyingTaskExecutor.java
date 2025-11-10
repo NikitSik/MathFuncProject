@@ -39,8 +39,9 @@ public class MultiplyingTaskExecutor {
             log.debug("Поток {} завершил выполнение", t.getName());
         }
 
-        log.info("Все потоки завершены. Результат функции будет выведен в лог");
-        log.info("Финальное состояние функции:\n{}", func);
+        log.info("Все потоки завершены. Результат функции:");
+        log.debug("Финальное состояние функции: {}", func.toString());
+        System.out.println(func.toString());
         log.info("MultiplyingTaskExecutor завершён");
     }
 }

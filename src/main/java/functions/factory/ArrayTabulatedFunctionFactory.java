@@ -9,7 +9,7 @@ public class ArrayTabulatedFunctionFactory implements TabulatedFunctionFactory {
 
     @Override
     public ArrayTabulatedFunction create(double[] xValues, double[] yValues) {
-        logger.debug("Создаём табулированную функцию на массивах через фабрику с количеством точек {}", xValues == null ? null : xValues.length);
+        logger.debug("Создаём табулированную функцию на массивах через фабрику с количеством точек {}", xValues.length);
         return new ArrayTabulatedFunction(xValues, yValues);
     }
 }

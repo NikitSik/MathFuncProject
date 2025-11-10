@@ -25,7 +25,8 @@ public class ReadTask implements Runnable {
                 double x = func.getX(i);
                 double y = func.getY(i);
                 log.trace("Поток {}: точка [{}] x = {}, y = {}", Thread.currentThread().getName(), i, x, y);
-                log.info("После чтения: i = {}, x = {}, y = {}", i, x, y);
+
+                System.out.printf("After read: i = %d, x = %f, y = %f%n", i, x, y);
             }
         }
         log.info("Поток {} закончил выполнение ReadTask", Thread.currentThread().getName());
